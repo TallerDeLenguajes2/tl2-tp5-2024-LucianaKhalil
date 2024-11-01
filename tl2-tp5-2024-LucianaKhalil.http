@@ -1,0 +1,6 @@
+@tl2_tp5_2024_LucianaKhalil_HostAddress = http://localhost:5016
+
+GET {{tl2_tp5_2024_LucianaKhalil_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

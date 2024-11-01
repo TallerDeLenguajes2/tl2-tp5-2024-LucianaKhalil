@@ -1,0 +1,8 @@
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.csproj.AssemblyReference.cache
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.AssemblyInfoInputs.cache
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.AssemblyInfo.cs
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alumno\Documents\tl2-tp5-2024-LucianaKhalil\obj\Debug\net8.0\tl2-tp5-2024-LucianaKhalil.sourcelink.json
