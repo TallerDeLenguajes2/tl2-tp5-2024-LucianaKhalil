@@ -2,10 +2,11 @@
 public class Presupuesto{
     private int idPresupuesto;
     private string nombreDestinatario;
-    private List<PresupuestoDetalle> detalle = new List<PresupuestoDetalle>();
+    private List<PresupuestoDetalle> detalle = new List<PresupuestoDetalle>();//inicializo la lista
 
     private const double IVA=0.21;
-
+    
+    //-------------------------
     public int IdPresupuesto { get => idPresupuesto; set => idPresupuesto = value; }
     public string NombreDestinatario { get => nombreDestinatario; set => nombreDestinatario = value; }
     public List<PresupuestoDetalle> Detalle { get => detalle; set => detalle = value; }

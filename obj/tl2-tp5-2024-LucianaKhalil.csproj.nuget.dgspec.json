@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alumno\\Documents\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj": {}
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\2024\\Taller2\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alumno\\Documents\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\2024\\Taller2\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alumno\\Documents\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\2024\\Taller2\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj",
         "projectName": "tl2-tp5-2024-LucianaKhalil",
-        "projectPath": "C:\\Users\\Alumno\\Documents\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj",
-        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alumno\\Documents\\tl2-tp5-2024-LucianaKhalil\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\2024\\Taller2\\tl2-tp5-2024-LucianaKhalil\\tl2-tp5-2024-LucianaKhalil.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\2024\\Taller2\\tl2-tp5-2024-LucianaKhalil\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,6 +53,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.119, )"
             }
           },
           "imports": [
@@ -73,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
