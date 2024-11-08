@@ -15,8 +15,12 @@ public interface IPresupuestosRepository{
 }
 
 public class PresupuestoRepositorio : IPresupuestosRepository{
-     private string cadenaConexion = "Data Source=tienda.db;Cache=Shared";
-
+     private string cadenaConexion = @"Data Source=db\Tienda.db;Cache=Shared";
+    //constructor
+    public PresupuestoRepositorio(string CadenaConexion)
+    {
+        cadenaConexion = CadenaConexion;
+    }
       public List<Presupuesto> getAll()
         {
             var queryString = @"SELECT * FROM Presupuestos;";
@@ -30,7 +34,7 @@ public class PresupuestoRepositorio : IPresupuestosRepository{
                 {
                     while (reader.Read())
                     {
-                        int idPresupuesto = Convert.ToInt32(reader["id"]);
+                        int idPresupuesto = Convert.ToInt32(reader["idPresupuesto"]);
                         string nombreDestinatario = reader["nombreDestinatario"].ToString();
                         Presupuesto presupuesto = new Presupuesto(idPresupuesto, nombreDestinatario);
                         presupuestos.Add(presupuesto);
@@ -46,14 +50,14 @@ public class PresupuestoRepositorio : IPresupuestosRepository{
             Presupuesto presupuesto=null;//inicializo en null
 
             SQLiteCommand command = connection.CreateCommand();
-            command.CommandText = "SELECT * FROM Presupuestos WHERE id = @idPresupuesto";
+            command.CommandText = "SELECT * FROM Presupuestos WHERE idPresupuesto = @idPresupuesto";
             command.Parameters.Add(new SQLiteParameter("@idPresupuesto", id));
             connection.Open();
             using(SQLiteDataReader reader = command.ExecuteReader())
             {
                 if (reader.Read())
                 {
-                    int idPresupuesto = Convert.ToInt32(reader["id"]);
+                    int idPresupuesto = Convert.ToInt32(reader["idPresupuesto"]);
                     string nombreDestinatario = reader["nombreDestinatario"].ToString();
 
                     presupuesto = new Presupuesto(idPresupuesto, nombreDestinatario);
@@ -66,22 +70,23 @@ public class PresupuestoRepositorio : IPresupuestosRepository{
         }
 
     public void Create(Presupuesto presupuesto)
+    {
+        var query = @"INSERT INTO Presupuestos (idPresupuesto, nombreDestinatario, FechaCreacion) 
+                    VALUES (@idPresupuesto, @nombreDestinatario, @FechaCreacion)";
+        using (SQLiteConnection connection = new SQLiteConnection(cadenaConexion))
         {
-            var query = $"INSERT INTO Presupuestos (id, nombreDest) VALUES (@id, @nombreDest)";
-            using (SQLiteConnection connection = new SQLiteConnection(cadenaConexion))
-            {
+            connection.Open();
+            var command = new SQLiteCommand(query, connection);
 
-                connection.Open();
-                var command = new SQLiteCommand(query, connection);
+            command.Parameters.Add(new SQLiteParameter("@idPresupuesto", presupuesto.IdPresupuesto));
+            command.Parameters.Add(new SQLiteParameter("@nombreDestinatario", presupuesto.NombreDestinatario));
+            command.Parameters.Add(new SQLiteParameter("@FechaCreacion", DateTime.Now));
 
-                command.Parameters.Add(new SQLiteParameter("@id",presupuesto.IdPresupuesto ));
-                command.Parameters.Add(new SQLiteParameter("@nombreDest", presupuesto.NombreDestinatario));
-
-                command.ExecuteNonQuery();
-
-                connection.Close();   
-            }
+            command.ExecuteNonQuery();
+            connection.Close();   
         }
+    }
+
     
 
     public void Update(int id, Productos producto, int cantidad){
